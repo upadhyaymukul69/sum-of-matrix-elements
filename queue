@@ -1,0 +1,24 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+int find(int n)
+{
+    int b = floor(log2(n)+1);
+    int o = ((1<<b)-1);
+    return o^n;
+}
+int main() {
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        int n;
+        cin>>n;
+        int k = find(n);
+        cout<<n*k<<endl;
+    }
+    return 0;
+}
